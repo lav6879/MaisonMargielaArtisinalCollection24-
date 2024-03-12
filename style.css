@@ -1,19 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Joan&family=Ojuju:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 400px;
+center {
+    display: block;
+    margin: 0 auto;
+}
+.makeupcontainer, .subtitles,.card ,.grid ,.cell,.cellfinal,.gridmain ,nav,.nav-links, #johng,#makeup,#centeredtext2, #centeredtext,#film,#sidepanel{
+  display: flex;
+}
+.makeupcontainer,.grid,.gridmain,#centeredtext2, #centeredtext,#johng,#designs,#sidepanel, #film{
+  flex-wrap: wrap;
 }
 
-div.gallery:hover {
-  border: 1px solid #777;
+.makeupcontainer{
+  justify-content: space-evenly;
+  flex-direction: row;
+  padding-left: 50px;
+  padding-right: 400px;
+}
+.subtitles{
+  justify-content: center;
+  flex-direction: row;
+  font-color: #2A221F;
+  padding-top: 50px;
+  font-size: 30px;
+  display: block;
+  padding-bottom: 20px;
+}
+.cont {
+  flex-direction: column;
+  padding-right: 50px;
+  width: 60%;
 }
 
-div.gallery img {
-  width: 100%;
-  height: auto;
+.cont .content {
+  flex: 1 1 auto;
+}
+
+.setimages{
+  position: static;
+  bottom: 0;
+  justify-content: center;
+}
+
+.grid {                                         
+  padding-left: 0px;
+  padding-top: 50px;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+#gallerypics{
+  border-radius: 30px;
+}
+.cell {
+  object-fit: contain; 
+  flex: 0 0 30%;                       
+  margin-bottom: 5px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+.cellfinal{
+  object-fit: contain;                     
+  margin-bottom: 0px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.gridmain {                                         
+  justify-content: space-between;
+}
+.cellmain{
+  flex: 0 0 32%;
 }
 
 div.desc {
@@ -28,23 +89,35 @@ body{
   padding: 0px;
 }
 
-p1{
-  text-transform: uppercase;
-}
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
+h1{
+  padding-top: 10px;
+  text-align: center;
+  font-family: "Ojuju", sans-serif;
+  display: block;
+  font-weight: 400;
+}
+p{
+  font-family: "Joan", sans-serif;
+  font-size: 24px;
+  font-weight: 50;
+  #2A221F;
+  font-kerning: none;
+  margin-block: 20px;
+}
 
 nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 8vh;
+  text-align: left;
+  min-height: 14vh;
   background-color: #204C73;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Ojuju", sans-serif;
   font-weight: 400;
+  font-weight: bolder;
+  text-transform: uppercase;
 }
 
 .heading {
@@ -52,12 +125,66 @@ nav {
   letter-spacing: 5px;
   font-size: 20px;
 }
+#johng{
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  margin-top: 65px;
+  object-fit: fill;
+  margin-right: 50px;
+}
+#designs{
+  margin: 0 auto;
+  display: block;
+  flex-direction: column;
+  position: static;
+  right: 0;
+  object-fit: fill;
+}
+
+#makeup{
+  width: 100%;
+  flex-direction: row;
+  text-align: center;
+}
+#centeredtext2, #centeredtext{
+  flex-direction: row;
+  text-align: center;
+}
+#centeredtext {
+  padding-left: 200px;
+  padding-right: 200px;
+}
+#centeredtext2 {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+#film{
+  background-image: url('https://eatbrave.co/cdn/shop/files/OAT_CARD_1_1.png?v=1646654951');
+  background-size: 87%;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+#sidepanel{
+  flex-direction: column;
+  position: absolute;
+  top: 917px;
+  left: 1045px;
+  right: 0;
+  object-fit: fill;
+}
 
 .nav-links {
-  display: flex;
-  justify-content: space-around;
-  width: 50%;
-  padding-left: 100px;
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 50px;
 }
 
 .nav-links li {
@@ -67,23 +194,13 @@ nav {
 .nav-links a {
   color: #F8F1F0;
   text-decoration: none;
-  letter-spacing: 3px;
-  font-weight: bold;
-  font-size: 14px;
-  padding: 18px 18px;
+  letter-spacing: 2px;
+  font-weight: 550;
+  font-size: 18px;
+  padding: 20px 20px;
+
 }
 
 .nav-links a:hover:not(.active) {
   color: #7A6564;
-}
-
-.container{
-  justify-content: space-between;
-  flex-direction: column;
-  align-items:center;
-  display: flex;
-  padding-left: 10px;
-  padding-right: 0px;
-  margin: 0px;
-  padding-top: 100px;
 }
